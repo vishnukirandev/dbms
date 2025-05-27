@@ -5,6 +5,7 @@ pipeline {
             steps {
                 bat '''
                 cd C:/workspace/dbms/dbms
+                C:/Users/Administrator/AppData/Local/Programs/Python/Python311/python.exe -m pip install -r requirements.txt
                 '''
             }
         }
@@ -19,7 +20,7 @@ pipeline {
             steps {
                 bat '''
                 cd C:/workspace/dbms/dbms
-                python app.py
+                C:/Users/Administrator/AppData/Local/Programs/Python/Python311/python.exe app.py
                 '''
             }
         }
