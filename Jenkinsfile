@@ -4,7 +4,7 @@ pipeline {
         stage('Install dependencies') {
             steps {
                 bat '''
-                cd C:\\workspace\\dbms\\dbms
+                cd C:/workspace/dbms/dbms
                 pip install -r requirements.txt
                 '''
             }
@@ -19,7 +19,7 @@ pipeline {
         stage('Run Flask') {
             steps {
                 bat '''
-                cd C:\\workspace\\dbms\\dbms
+                cd C:/workspace/dbms/dbms
                 python app.py
                 '''
             }
