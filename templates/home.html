@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CD Rental</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Welcome, {{ user }} 🎧</h2>
+    <a href="/logout">Logout</a>
+
+    <ul>
+        {% for cd in cds %}
+            <li>
+                <strong>{{ cd[1] }}</strong>
+                {% if cd[2] == 0 %}
+                    <a href="/rent/{{ cd[0] }}">
+                        <button>Rent</button>
+                    </a>
+                {% elif cd[3] == user %}
+                    <a href="/return/{{ cd[0] }}">
+                        <button style="background-color: #6c757d;">Return</button>
+                    </a>
+                {% else %}
+                    <span style="color: gray;">Rented by another user 💔</span>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+    
+</body>
+</html>
