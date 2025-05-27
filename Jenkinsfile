@@ -5,7 +5,6 @@ pipeline {
             steps {
                 bat '''
                 cd C:/workspace/dbms/dbms
-                pip install -r requirements.txt
                 '''
             }
         }
