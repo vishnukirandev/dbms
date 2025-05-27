@@ -5,7 +5,7 @@ pipeline {
             steps {
                 bat '''
                 cd C:/workspace/dbms/dbms
-                -m pip install -r requirements.txt
+                python -m pip install -r requirements.txt
                 '''
             }
         }
@@ -20,7 +20,7 @@ pipeline {
             steps {
                 bat '''
                 cd C:/workspace/dbms/dbms
-                 app.py
+                python app.py
                 '''
             }
         }
