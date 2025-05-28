@@ -16,11 +16,11 @@ pipeline {
                 '''
             }
         }
-        stage('Run Flask') {
+        stage('Run Flask in Background') {
             steps {
                 bat '''
                 cd C:/workspace/dbms/dbms
-                python app.py
+                start "" python app.py
                 '''
             }
         }
